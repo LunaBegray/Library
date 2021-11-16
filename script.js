@@ -33,5 +33,5 @@ for(i = 0; i < myLibrary.length; i++){
     let newCard = document.createElement("div");
     newCard.classList.add("card");
     newCard.textContent = myLibrary[i].name + " " + myLibrary[i].author + " " +myLibrary[i].pages + " " + myLibrary[i].read
-    newCard.appendChild(container);
+    container.appendChild(newCard);
 }
