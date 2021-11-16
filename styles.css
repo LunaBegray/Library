@@ -6,7 +6,7 @@ body{
 }
 .container{
     height: 900px;
-    width:1000px;
+    width:1400px;
     background-color:lightgreen;
     display:flex;
     column-gap: 50px;
