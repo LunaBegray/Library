@@ -13,6 +13,7 @@ body{
     justify-content:space-between;
     flex-wrap: wrap;
     align-items:space-between;
+    font-size:20px;
 }
 .form{
     position:absolute;
