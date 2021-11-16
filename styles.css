@@ -5,13 +5,14 @@ body{
     align-items: center;
 }
 .container{
-    height:auto;
+    height: 900px;
     width:1000px;
     background-color:lightgreen;
     display:flex;
-    justify-content: center;
     column-gap: 50px;
+    justify-content:space-between;
     flex-wrap: wrap;
+    align-items:space-between;
 }
 .form{
     position:absolute;
