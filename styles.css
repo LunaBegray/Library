@@ -5,11 +5,22 @@ body{
     align-items: center;
 }
 .container{
-    height:10000px;
+    height:auto;
     width:1000px;
     background-color:lightgreen;
+    display:flex;
+    justify-content: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
 }
 .form{
     position:absolute;
     z-index:1000;
+}
+.card{
+    height:90px;
+    width:60px;
+    background-color:lightyellow;
+    overflow-wrap:normal;
+    word-wrap: normal;
 }
