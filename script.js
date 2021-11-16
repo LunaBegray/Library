@@ -53,6 +53,6 @@ addBtn.addEventListener('click', function(){
 for(i = 0; i < myLibrary.length; i++){
     let newCard = document.createElement("div");
     newCard.classList.add("card");
-    newCard.textContent = myLibrary[i].name + <br /> + myLibrary[i].author + <br /> +myLibrary[i].pages + <br /> + myLibrary[i].read;
+    newCard.textContent = myLibrary[i].name + " <br />" + myLibrary[i].author + "<br /> " +myLibrary[i].pages + "<br /> " + myLibrary[i].read;
     container.appendChild(newCard);
 }
