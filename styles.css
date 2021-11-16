@@ -20,8 +20,8 @@ body{
     z-index:1000;
 }
 .card{
-    height:300px;
-    width:200px;
+    height:200px;
+    width:250px;
     background-color:lightyellow;
     overflow-wrap:normal;
     word-wrap: normal;
