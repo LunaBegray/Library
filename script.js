@@ -15,8 +15,11 @@ const container = document.querySelector(".container");
 function addBookToLibrary(book) {
     myLibrary.push(book);
 }
+console.log(myLibrary);
 addBookToLibrary(harryPotter);
+console.log(myLibrary);
 addBookToLibrary(theguy);
+console.log(myLibrary);
 /*
 let addBtn = document.querySelector(".addBtn");
 addBtn.addEventListener('click', function(){
