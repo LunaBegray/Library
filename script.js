@@ -37,7 +37,7 @@ addBtn.addEventListener('click', function(){
         let nameFNB = inputName.value;
         let authorFNB  = inputAuthor.value;
         let pagesFNB = inputPages.value;
-        let readFNB = input.value;
+        let readFNB = inputRead.value;
         let newBook = new Book(nameFNB, authorFNB, pagesFNB, readFNB);
         addBookToLibrary(newBook);
         console.log(newBook);
