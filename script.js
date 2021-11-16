@@ -17,10 +17,17 @@ function addBookToLibrary(book) {
 }
 addBookToLibrary(harryPotter);
 addBookToLibrary(theguy);
+/*
+let addBtn = document.querySelector(".addBtn");
+addBtn.addEventListener('click', function(){
+    let form = document.createElement("div");
+    form.classList.add("form");
+    
+}
+) */
 
 for(i = 0; i < myLibrary.length; i++){
     let newCard = document.createElement("div");
     newCard.textContent = myLibrary[i].name + " " + myLibrary[i].author + " " +myLibrary[i].pages + " " + myLibrary[i].read
     newCard.appendChild(container);
 }
-
