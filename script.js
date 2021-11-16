@@ -33,6 +33,7 @@ addBtn.addEventListener('click', function(){
     form.appendChild(inputPages);
     form.appendChild(inputRead);
     let continueBtn = document.createElement("button");
+    continueBtn.textContent = "continue";
     continueBtn.addEventListener('click', function(){
         let nameFNB = inputName.value;
         let authorFNB  = inputAuthor.value;
@@ -52,6 +53,6 @@ addBtn.addEventListener('click', function(){
 for(i = 0; i < myLibrary.length; i++){
     let newCard = document.createElement("div");
     newCard.classList.add("card");
-    newCard.textContent = myLibrary[i].name + " " + myLibrary[i].author + " " +myLibrary[i].pages + " " + myLibrary[i].read
+    newCard.textContent = myLibrary[i].name + " " + myLibrary[i].author + " " +myLibrary[i].pages + " " + myLibrary[i].read;
     container.appendChild(newCard);
 }
