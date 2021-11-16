@@ -54,6 +54,7 @@ addBtn.addEventListener('click', function(){
         addBookToLibrary(newBook);
         console.log(newBook);
         console.log(myLibrary);
+        container.textContent = '';
         display();
         form.remove();
     });
