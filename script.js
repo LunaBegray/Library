@@ -20,6 +20,15 @@ console.log(myLibrary);
 addBookToLibrary(theguy);
 console.log(myLibrary);
 
+function display(){
+    for(i = 0; i < myLibrary.length; i++){
+        let newCard = document.createElement("div");
+        newCard.classList.add("card");
+        newCard.textContent = myLibrary[i].name + " <br />" + myLibrary[i].author + "<br /> " +myLibrary[i].pages + "<br /> " + myLibrary[i].read;
+        container.appendChild(newCard);
+    }
+}
+
 let addBtn = document.querySelector(".addBtn");
 addBtn.addEventListener('click', function(){
     let form = document.createElement("div");
@@ -43,6 +52,7 @@ addBtn.addEventListener('click', function(){
         addBookToLibrary(newBook);
         console.log(newBook);
         console.log(myLibrary);
+        display();
         form.remove();
     });
     form.appendChild(continueBtn);
@@ -50,9 +60,4 @@ addBtn.addEventListener('click', function(){
 }
 ); 
 
-for(i = 0; i < myLibrary.length; i++){
-    let newCard = document.createElement("div");
-    newCard.classList.add("card");
-    newCard.textContent = myLibrary[i].name + " <br />" + myLibrary[i].author + "<br /> " +myLibrary[i].pages + "<br /> " + myLibrary[i].read;
-    container.appendChild(newCard);
-}
+    
