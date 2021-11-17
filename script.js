@@ -31,7 +31,7 @@ function display(){
         anoBtn.addEventListener('click', function(){
             console.log("button lunched");
             if(newCard.style.backgroundColor == 'blue'){
-                newCard.style.backgroundColor = 'red';
+                newCard.style.backgroundColor = 'yellow';
                 console.log("first if statement lunched");
             } else {
                 newCard.style.backgroundColor = 'blue';
