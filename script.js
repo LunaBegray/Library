@@ -30,7 +30,7 @@ function display(){
         anoBtn.textContent = "Mark As Read";
         anoBtn.addEventListener('click', function(){
             console.log("button lunched");
-            if(newCard.style.backgroundColor == 'lightYellow'){
+            if(newCard.style.backgroundColor == 'blue'){
                 newCard.style.backgroundColor = 'red';
                 console.log("first if statement lunched");
             } else {
