@@ -29,10 +29,13 @@ function display(){
         let anoBtn = document.createElement("button");
         anoBtn.textContent = "Mark As Read";
         anoBtn.addEventListener('click', function(){
+            console.log("button lunched");
             if(newCard.style.backgroundColor == 'lightYellow'){
                 newCard.style.backgroundColor = 'red';
+                console.log("first if statement lunched");
             } else {
                 newCard.style.backgroundColor = 'lightYellow';
+                console.log("second if statement lunched");
             }
         });
         newCard.appendChild(anoBtn);
