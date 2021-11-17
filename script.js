@@ -26,6 +26,15 @@ function display(){
             newCard.remove();
             myLibrary.splice(myLibrary[i],1);
         });
+        let anoBtn = document.createElement("button");
+        anoBtn.textContet = "Mark As Read";
+        anoBtn.addEventListener('click', function(){
+            if(newCard.style.backgroundColor == 'lightYellow'){
+                newCard.style.backgroundColor = 'red';
+            } else {
+                newCard.style.backgroundColor = 'lightYellow';
+            }
+        });
         newCard.appendChild(newBtn);
         container.appendChild(newCard);
     }
