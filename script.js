@@ -35,6 +35,7 @@ function display(){
                 newCard.style.backgroundColor = 'lightYellow';
             }
         });
+        newCard.appendChild(anoBtn);
         newCard.appendChild(newBtn);
         container.appendChild(newCard);
     }
