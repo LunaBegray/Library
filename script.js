@@ -1,36 +1,34 @@
-let myLibrary = [];
+let myLibrary = []; //my library
 
 function Book(name, author, pages, read) {
   this.name = name;
   this.author = author;
   this.pages = pages;
   this.read = read;
-}
-/*
-let harryPotter = new Book("harryPotter", "jk", 300, "nope");
-let theguy = new Book("theguy", "luna", 300, "yes");
-*/
+} //constructor for new books
+
 const container = document.querySelector(".container");
 
 function addBookToLibrary(book) {
     myLibrary.push(book);
-}
-/*
-console.log(myLibrary);
-addBookToLibrary(harryPotter);
-console.log(myLibrary);
-addBookToLibrary(theguy);
-console.log(myLibrary); */
+} //adding books to the library
 
+//loops through myLibrary to find books and display it.
 function display(){
     for(i = 0; i < myLibrary.length; i++){
         let newCard = document.createElement("div");
         newCard.classList.add("card");
         newCard.textContent = myLibrary[i].name + " " + myLibrary[i].author + " " +myLibrary[i].pages + " " + myLibrary[i].read;
+        newCard.id = myLibrary[i];
+        let newBtn = document.createElement("button");
+        newBtn.addEventListener('click', function(){
+            newCard.remove();
+        });
+        newCard.appendChild(newBtn);
         container.appendChild(newCard);
     }
-}
-
+} 
+//creates 4 inputs for name, author, pages, read, then when continue pressed it adds a book with the info and deletes the form.
 let addBtn = document.querySelector(".addBtn");
 addBtn.addEventListener('click', function(){
     let form = document.createElement("div");
