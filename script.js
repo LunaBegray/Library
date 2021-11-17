@@ -21,8 +21,12 @@ function display(){
         newCard.textContent = myLibrary[i].name + " " + myLibrary[i].author + " " +myLibrary[i].pages + " " + myLibrary[i].read;
         newCard.id = myLibrary[i];
         let newBtn = document.createElement("button");
+        newBtn.textContent = "Remove Book"
         newBtn.addEventListener('click', function(){
+            console.log(myLibrary);
             newCard.remove();
+            myLibrary.splice(myLibrary[i],1);
+            console.log(myLibrary);
         });
         newCard.appendChild(newBtn);
         container.appendChild(newCard);
