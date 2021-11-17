@@ -23,10 +23,8 @@ function display(){
         let newBtn = document.createElement("button");
         newBtn.textContent = "Remove Book"
         newBtn.addEventListener('click', function(){
-            console.log(myLibrary);
             newCard.remove();
             myLibrary.splice(myLibrary[i],1);
-            console.log(myLibrary);
         });
         newCard.appendChild(newBtn);
         container.appendChild(newCard);
@@ -54,8 +52,6 @@ addBtn.addEventListener('click', function(){
         let readFNB = inputRead.value;
         let newBook = new Book(nameFNB, authorFNB, pagesFNB, readFNB);
         addBookToLibrary(newBook);
-        console.log(newBook);
-        console.log(myLibrary);
         container.textContent = '';
         display();
         form.remove();
