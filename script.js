@@ -27,7 +27,7 @@ function display(){
             myLibrary.splice(myLibrary[i],1);
         });
         let anoBtn = document.createElement("button");
-        anoBtn.textContet = "Mark As Read";
+        anoBtn.textContent = "Mark As Read";
         anoBtn.addEventListener('click', function(){
             if(newCard.style.backgroundColor == 'lightYellow'){
                 newCard.style.backgroundColor = 'red';
