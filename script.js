@@ -54,10 +54,10 @@ addBtn.addEventListener('click', function(){
     let inputAuthor = document.createElement("input")
     let inputPages = document.createElement("input")
     let inputRead = document.createElement("input")
-    inputName.required = true;
-    inputAuthor.required = true;
-    inputPages.required = true;
-    inputRead.required = true;
+    inputName.setAttribute("required", "");
+    inputAuthor.setAttribute("required", "");
+    inputPages.setAttribute("required", "");
+    inputRead.setAttribute("required", "");
     form.appendChild(inputName);
     form.appendChild(inputAuthor);
     form.appendChild(inputPages);
@@ -65,15 +65,19 @@ addBtn.addEventListener('click', function(){
     let continueBtn = document.createElement("button");
     continueBtn.textContent = "continue";
     continueBtn.addEventListener('click', function(){
-        let nameFNB = inputName.value;
-        let authorFNB  = inputAuthor.value;
-        let pagesFNB = inputPages.value;
-        let readFNB = inputRead.value;
-        let newBook = new Book(nameFNB, authorFNB, pagesFNB, readFNB);
-        addBookToLibrary(newBook);
-        container.textContent = '';
-        display();
-        form.remove();
+        if(!inputName.validity.valueMissing && !inputAuthor.validity.valueMissing && !inputPages.validity.valueMissing && !inputRead.validity.valueMissing){
+            let nameFNB = inputName.value;
+            let authorFNB  = inputAuthor.value;
+            let pagesFNB = inputPages.value;
+            let readFNB = inputRead.value;
+            let newBook = new Book(nameFNB, authorFNB, pagesFNB, readFNB);
+            addBookToLibrary(newBook);
+            container.textContent = '';
+            display();
+            form.remove();
+        } else{
+            alert("one of your inputs is empty you idiot");
+        }
     });
     form.appendChild(continueBtn);
     container.appendChild(form);
