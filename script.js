@@ -54,6 +54,10 @@ addBtn.addEventListener('click', function(){
     let inputAuthor = document.createElement("input")
     let inputPages = document.createElement("input")
     let inputRead = document.createElement("input")
+    inputName.required = true;
+    inputAuthor.required = true;
+    inputPages.required = true;
+    inputRead.required = true;
     form.appendChild(inputName);
     form.appendChild(inputAuthor);
     form.appendChild(inputPages);
